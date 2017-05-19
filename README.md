@@ -1,6 +1,13 @@
 # Responsive JSON carousel
 A responsive carousel that is being feed by a JSON file or a JSON object
 
+**Run locally**
+1. download the zip
+2. in terminal: cd location/of/download
+3. npm install
+4. gulp connect
+5. visit http://localhost:8080/ in the browser
+
 **Preview**
 http://jsoncarousel.pixelbash.nl/
 
