@@ -19,6 +19,9 @@ http://jsoncarousel.pixelbash.nl/
 ```
 
 **2. Give an < div > an unique ID**
+```HTML
+<div class="uniqueID"></div>
+```
 
 **3. Call the function on the unique ID**
 
