@@ -1,6 +1,6 @@
 body {
-    background: #fff;
     padding-bottom: 2em;
+    background: #fff;
 }
 
 h1 {
@@ -25,20 +25,23 @@ h1 {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.42857143;
+    line-height: 15px;
     position: absolute;
     z-index: 1;
+    z-index: 3;
     top: 50%;
-    margin-bottom: 0;
-    height: 50px;
     width: 30px;
+    height: 50px;
     margin-top: -25px;
-    line-height: 15px;
-    border-radius: 4px;
+    margin-bottom: 0;
     cursor: pointer;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    -webkit-transition: all .4s ease;
+    -webkit-transition: all .4s ease;
+    transition: all .4s ease;
     text-align: center;
     vertical-align: middle;
     white-space: nowrap;
@@ -46,23 +49,20 @@ h1 {
     opacity: .8;
     color: #fff;
     border: 1px solid transparent;
+    border-radius: 4px;
     background: #2a2a2a;
     background-image: none;
     -ms-touch-action: manipulation;
     touch-action: manipulation;
-    -webkit-transition: all 0.4s ease;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-    z-index: 3;
 }
 
 @media only screen and (min-width: 480px) {
     .j-carousel button.btn-prev,
     .j-carousel button.btn-next {
-        height: 70px;
-        width: 50px;
-        margin-top: -35px;
         line-height: 35px;
+        width: 50px;
+        height: 70px;
+        margin-top: -35px;
     }
 }
 
@@ -98,22 +98,22 @@ h1 {
     margin-top: 15px;
     margin-bottom: 15px;
     padding: 0;
-    opacity: 0.4;
+    -webkit-transition: all .2s ease;
+    -webkit-transition: all .2s ease;
+    transition: all .2s ease;
     text-align: center;
+    opacity: .4;
     background: #fff;
-    -webkit-transition: all 0.2s ease;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
-    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .2);
 }
 
 .j-carousel ul li.active {
+    z-index: 2;
     height: 360px;
-    opacity: 1;
     margin-top: 5px;
     margin-bottom: 5px;
-    z-index: 2;
+    opacity: 1;
 }
 
 .j-carousel ul li a {
