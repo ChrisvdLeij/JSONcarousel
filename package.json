@@ -1,0 +1,16 @@
+{
+  "name": "json-carousel",
+  "version": "1.0.0",
+  "description": "Plugin: Carousel which can be with filled with a jSon file",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Chris van der Leij",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-connect": "^5.0.0",
+    "gulp-webserver": "^0.9.1"
+  }
+}

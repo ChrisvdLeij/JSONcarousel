@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>JSON Carousel by Chris van der Leij</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/src/css/jcarousel.css">
+</head>
+
+<body>
+  <h1 class="text-center">Responsive JSON carousel</h1>
+  <div class="jumbotron">
+    <div class="container">
+      <div id="carousel1"></div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>JSON url</h2>
+        <p>
+          Autoplay enabled, 15px margin on slides, intervalSpeed set on 3000 and animationSpeed set to 200.
+        </p>
+        <div id="carousel2"></div>
+      </div>
+      <div class="col-md-6">
+        <h2>JSON obj</h2>
+        <p>
+          Autoplay disables, 0 margin on slides, intervalSpeed sefault and animationSpeed default.
+        </p>
+        <div id="carousel3"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="src/js/jcarousel.js"></script>
+  <script>
+    var someJsonObj = [{
+      "title": "1: Dit is een jSONtest titel",
+      "description": "Achteraf bleek dat het gezin een juiste beslissing nam door niet open te doen.",
+      "link": "http://avro.nl/opsporingverzocht/Zaken/20151215/den_bosch_vuurwerk.aspx",
+      "enclosure": {
+        "_url": "http://staticextern.avrotros.nl/images/e19/tcm17_345616_medium.jpg",
+      }
+    }, {
+      "title": "2: Dit is een jSONtest titel",
+      "description": "Achteraf bleek dat het gezin een juiste beslissing nam door niet open te doen.",
+      "link": "http://avro.nl/opsporingverzocht/Zaken/20151215/den_bosch_vuurwerk.aspx",
+      "enclosure": {
+        "_url": "http://staticextern.avrotros.nl/images/e19/tcm17_345616_medium.jpg",
+      }
+    }, {
+      "title": "3: Dit is een jSONtest titel",
+      "description": "Achteraf bleek dat het gezin een juiste beslissing nam door niet open te doen.",
+      "link": "http://avro.nl/opsporingverzocht/Zaken/20151215/den_bosch_vuurwerk.aspx",
+      "enclosure": {
+        "_url": "http://staticextern.avrotros.nl/images/e19/tcm17_345616_medium.jpg",
+      }
+    }, {
+      "title": "4: Dit is een jSONtest titel",
+      "description": "Achteraf bleek dat het gezin een juiste beslissing nam door niet open te doen.",
+      "link": "http://avro.nl/opsporingverzocht/Zaken/20151215/den_bosch_vuurwerk.aspx",
+      "enclosure": {
+        "_url": "http://staticextern.avrotros.nl/images/e19/tcm17_345616_medium.jpg",
+      }
+    }, {
+      "title": "5: Dit is een jSONtest titel",
+      "description": "Achteraf bleek dat het gezin een juiste beslissing nam door niet open te doen.",
+      "link": "http://avro.nl/opsporingverzocht/Zaken/20151215/den_bosch_vuurwerk.aspx",
+      "enclosure": {
+        "_url": "http://staticextern.avrotros.nl/images/e19/tcm17_345616_medium.jpg",
+      }
+    }, {
+      "title": "6: Dit is een jSONtest titel",
+      "description": "Achteraf bleek dat het gezin een juiste beslissing nam door niet open te doen.",
+      "link": "http://avro.nl/opsporingverzocht/Zaken/20151215/den_bosch_vuurwerk.aspx",
+      "enclosure": {
+        "_url": "http://staticextern.avrotros.nl/images/e19/tcm17_345616_medium.jpg",
+      }
+    }];
+
+    $(document).ready(function() {
+      $('#carousel1').jCarousel({
+        jsonUrl: 'json/opsporingverzocht-zaken.json',
+        // jsonObj: someOtherJsonObj,
+        itemMargin: 5,
+        autoPlay: true,
+        intervalSpeed: 2000,
+        animationSpeed: 500,
+      });
+      $('#carousel2').jCarousel({
+        jsonUrl: 'json/opsporingverzocht-zaken-2.json',
+        itemMargin: 15,
+        autoPlay: true,
+        intervalSpeed: 3000,
+        animationSpeed: 200,
+      });
+      $('#carousel3').jCarousel({
+        jsonObj: someJsonObj,
+      });
+    });
+  </script>
+</body>
+
+</html>
