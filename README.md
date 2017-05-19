@@ -2,6 +2,7 @@
 A responsive carousel that is being feed by a JSON file or JSON object
 
 **Preview**
+http://jsoncarousel.pixelbash.nl/
 
 
 **1. Setup the JSON file or JSON object**
