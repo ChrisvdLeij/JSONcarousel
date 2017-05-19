@@ -1,5 +1,5 @@
 # Responsive JSON carousel
-A responsive carousel that is being feed by a JSON file or JSON object
+A responsive carousel that is being feed by a JSON file or a JSON object
 
 **Preview**
 http://jsoncarousel.pixelbash.nl/
