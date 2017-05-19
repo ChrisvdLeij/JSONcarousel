@@ -36,3 +36,4 @@ $(document).ready(function() {
     });
 });
 ```
+**Multiple sliders can be set with unique id's**
