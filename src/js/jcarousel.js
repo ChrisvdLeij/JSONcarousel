@@ -32,19 +32,24 @@
             else if (settings.jsonUrl) {
                 $.getJSON(settings.jsonUrl)
                     .done(function (data) {
+
                         // pass the JSON data to the renderJsonSlide function
                         renderJsonSlides(data);
                     })
+
                     // Show an error msg when the JSON fails and output the error in the console
                     .fail(function (jqxhr, textStatus, error) {
                         $(selfId).html('Failed to load the JSON url');
                         console.log(jqxhr, textStatus, error);
                     });
+
             } // check if JSON object is filled and process the data
             else if (settings.jsonObj) {
+
                 // pass the JSON data to the renderJsonSlide function
                 renderJsonSlides(settings.jsonObj);
             } else {
+
                 // show an error msg wgen the jsonUrl is empty
                 $(selfId).html('Please pass a jsonUrl or jsonObj to the plugin');
             }
@@ -77,12 +82,6 @@
             function initSlider() {
                 centerFirstSlide();
                 positionSlides();
-
-                // re-position the slides on window resize for responsiveness
-                $(window).on('resize', function () {
-                    positionSlides();
-                });
-
                 renderControls();
                 bindEvents();
                 // autoPlay();
@@ -179,6 +178,11 @@
                         }
                     });
                 }
+
+                // re-position the slides on window resize for responsiveness
+                $(window).on('resize', function () {
+                    positionSlides();
+                });
             }
 
             function autoPlay() {
